@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
 
   constructor(){
     super();
+
     this.state={
       count_value:0
     }
@@ -13,7 +14,8 @@ import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
   increment(){
       this.setState({
         count_value:this.state.count_value +1
-      })      
+      })  
+      console.log('welcome')    
   }
 
   decrement(){
