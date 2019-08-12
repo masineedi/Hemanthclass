@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { View, Button, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
-import Styles from '../../../styles'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
   export default  class Home extends Component {
 
   constructor(){
@@ -11,7 +9,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
     }
 
   }
-
 
   increment(){
       this.setState({
