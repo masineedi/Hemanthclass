@@ -12,7 +12,11 @@ export default class Login extends Component {
     signup(){
 
         if ( this.state.text.length > 1 && this.state.pass.length > 1) {
-            this.props.navigation.navigate('Home')
+            this.props.navigation.navigate('Home',{
+                name:`${this.state.text}`,
+                password:`${this.state.pass}`,
+                city:`${this.state.city}`,
+            })
             console.log( this.state.text)
         } else {
             alert("Please fill the details")
@@ -25,6 +29,10 @@ export default class Login extends Component {
         <View style={{  borderWidth: 1,margin:4}}>
             <Text style={{fontSize:20, color:'#00f'}}>Enter EMail:</Text>
             <TextInput onChangeText={(text)=>{this.setState({text})}} value={this.state.text} placeholder='enter email Id'/>
+        </View>
+        <View style={{ borderWidth: 1,margin:4}}>
+            <Text style={{fontSize:20, color:'#00f'}}>Enter City name:</Text>
+            <TextInput  onChangeText={(city)=>{this.setState({city})}} value={this.state.city}     placeholder='enter City name'/>
         </View>
         <View style={{ borderWidth: 1,margin:4}}>
             <Text style={{fontSize:20, color:'#00f'}}>Enter Password:</Text>
