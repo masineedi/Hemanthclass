@@ -16,6 +16,7 @@ import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
         count_value:this.state.count_value +1
       })  
       console.log('welcome')    
+      
   }
 
   decrement(){

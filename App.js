@@ -4,6 +4,7 @@ import {createStackNavigator, createAppContainer, createBottomTabNavigator, crea
 import ScrollImage from './app/src/Screens/ScrollImages'
 import Home from './app/src/Screens/Home'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Login from './app/src/Screens/Login'
 
 export default  class App extends Component {
   render() {
@@ -15,20 +16,36 @@ export default  class App extends Component {
   }
 }
 
-// const stacknav = createStackNavigator({
-//   Home:{
-//     screen:Home
-//   },
-//   ScrollImage:{
-//     screen:ScrollImage
-//   },
-//   tabs:{
-//     screen:tabs
-//   }
+const stacknav = createStackNavigator({
+  Home:{
+    screen:Home
+  },
+  ScrollImage:{
+    screen:ScrollImage
+  },
+  Login:{
+    screen:Login,
 
-// },{
-//   initialRouteName:'tabs'
-// })
+    navigationOptions:{
+      title:'Login Page',
+        headerStyle:{
+            // tintColor:'white',
+            backgroundColor:'red',
+        },
+        headerTintColor:'white',
+        
+    }
+  },
+
+
+},{
+  defaultNavigationOptions:{
+    headerStyle:{
+      backgroundColor:'#00f'
+    }
+  },
+  initialRouteName:'Login'
+})
 
 const tabs = createBottomTabNavigator({
   Home:{
@@ -61,21 +78,21 @@ const tabs = createBottomTabNavigator({
 
 
 
-const drawer = createDrawerNavigator({
+// const drawer = createDrawerNavigator({
 
-  Home:{
-    screen:Home
-  },
-  ScrollImage:{
-    screen:ScrollImage
-  },
-  // styles:{
-  //   screen:Home
-  // },
+//   Home:{
+//     screen:Home
+//   },
+//   ScrollImage:{
+//     screen:ScrollImage
+//   },
+//   // styles:{
+//   //   screen:Home
+//   // },
 
-})
+// })
 
-const Appcontain = createAppContainer(tabs)
+const Appcontain = createAppContainer(stacknav)
 
 
 
