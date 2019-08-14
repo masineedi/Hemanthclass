@@ -60,7 +60,7 @@ import { View, Text, StyleSheet, TouchableNativeFeedback, Button, Image } from "
 
         </View>
         <View style={{height:100}}>
-
+<Button onPress={()=>this.props.navigation.navigate('ScrollImage')} title="goto image screen"/>
         </View>
       <View style={{flexDirection:'row', justifyContent:'center',alignItems:'center', marginVertical: 20,}}>
             <TouchableNativeFeedback onPress={this.decrement.bind(this)}>

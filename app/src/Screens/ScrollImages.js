@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View,Text, StyleSheet,Image, ScrollView, Button} from 'react-native';
+import {View,Text, StyleSheet,Image, S} from 'react-native';
 export default class ScrollImage extends Component {
       render(){
         return(
@@ -9,7 +9,7 @@ export default class ScrollImage extends Component {
             <Text>this kjhkj is Image one</Text>
             <Button title="back to home" onPress={()=>this.props.navigation.navigate('Home')} />
           </View> */}
-
+ 
           <View style={{flex:1}}>
             <View style={{flexGrow:2, backgroundColor:'red'}}>
                 <Text>One</Text>

@@ -5,6 +5,8 @@ import ScrollImage from './app/src/Screens/ScrollImages'
 import Home from './app/src/Screens/Home'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Login from './app/src/Screens/Login'
+import Flatlistt from './app/src/Screens/Flatlist'
+
 
 export default  class App extends Component {
   render() {
@@ -36,6 +38,9 @@ const stacknav = createStackNavigator({
         
     }
   },
+  Flat:{
+    screen:Flatlistt
+  },
 
 
 },{
@@ -44,7 +49,7 @@ const stacknav = createStackNavigator({
       backgroundColor:'#00f'
     }
   },
-  initialRouteName:'Login'
+  initialRouteName:'Flat'
 })
 
 const tabs = createBottomTabNavigator({
