@@ -109,9 +109,7 @@ export default class Flatlistt extends Component {
                 data={this.state.data}
                 renderItem={({item}) => (
                     <View style={{flex:1, marginBottom:10}}>
-                 
                     {this.cardMenu(item)}
-
                     </View>
                 )}
                 />}

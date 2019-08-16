@@ -6,7 +6,7 @@ import Home from './app/src/Screens/Home'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Login from './app/src/Screens/Login'
 import Flatlistt from './app/src/Screens/Flatlist'
-
+import Search from './app/src/Screens/search'
 
 export default  class App extends Component {
   render() {
@@ -19,12 +19,6 @@ export default  class App extends Component {
 }
 
 const stacknav = createStackNavigator({
-  Home:{
-    screen:Home
-  },
-  ScrollImage:{
-    screen:ScrollImage
-  },
   Login:{
     screen:Login,
 
@@ -38,9 +32,24 @@ const stacknav = createStackNavigator({
         
     }
   },
+
+  ScrollImage:{
+    screen:ScrollImage
+  },
+  Home:{
+    screen:Home
+  },
+
   Flat:{
     screen:Flatlistt
   },
+  Search:{
+    screen:Search,
+    navigationOptions:{
+      title:'Search Page',
+      headerTintColor:'white',
+    }
+  }
 
 
 },{
@@ -49,7 +58,7 @@ const stacknav = createStackNavigator({
       backgroundColor:'#00f'
     }
   },
-  initialRouteName:'Flat'
+  initialRouteName:'Search'
 })
 
 const tabs = createBottomTabNavigator({
