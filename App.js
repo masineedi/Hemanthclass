@@ -46,7 +46,7 @@ const stacknav = createStackNavigator({
   Search:{
     screen:Search,
     navigationOptions:{
-      title:'Search Page',
+      // title:'Search Page',
       headerTintColor:'white',
     }
   }

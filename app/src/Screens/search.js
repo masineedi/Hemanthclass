@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 import { Text, StyleSheet, View, TextInput, ActivityIndicator, Alert, FlatList } from 'react-native';
 
 export default class Search extends Component {
+
+    static navigationOptions={
+     title:'Searchdd Page',
+     
+    }
  
   constructor(props) {
 
@@ -54,7 +59,7 @@ export default class Search extends Component {
      })
      this.setState({
          dataSource: newData,
-         text: text
+         text: hemanth
      })
  }
 
