@@ -29,7 +29,6 @@ export default class Search extends Component {
      fetch('https://reactnativecode.000webhostapp.com/FruitsList.php')
       .then((response) => response.json())
       .then((responseJson) => {
-          console.log(responseJson)
         this.setState({
           isLoading: false,
           dataSource: responseJson

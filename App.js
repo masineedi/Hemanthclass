@@ -58,7 +58,7 @@ const stacknav = createStackNavigator({
       backgroundColor:'#00f'
     }
   },
-  initialRouteName:'Search'
+  initialRouteName:'Login'
 })
 
 const tabs = createBottomTabNavigator({

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, Button, AsyncStorage } from "react-native";
 
 export default class Login extends Component {
   constructor(props) {
@@ -8,15 +8,23 @@ export default class Login extends Component {
   }
 
   signup() {
-    if (this.state.text.length > 1 && this.state.pass.length > 1) {
+    // if (this.state.text.length > 1 && this.state.pass.length > 1) {
       this.props.navigation.navigate("Home", {
         name: `${this.state.text}`,
         password: `${this.state.pass}`,
         city: `${this.state.city}`
-      });
-    } else {
-      alert("Please fill the details");
-    }
+      })
+
+      let obje = {
+        name:`${this.state.text}`,
+        password: `${this.state.pass}`,
+        city: `${this.state.city}`
+      }
+      AsyncStorage.setItem('nameid',JSON.stringify(obje))
+
+    // } else {
+    //   alert("Please fill the details");
+    // }
   }
 
   render() {
